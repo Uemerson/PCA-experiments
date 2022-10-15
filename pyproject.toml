@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pca-experiments"
+version = "0.1.0"
+description = ""
+authors = ["Uemerson Pinheiro Junior <uemersonpinheirojunior@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pca_experiments"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.6.1"
+numpy = "^1.23.4"
+scikit-learn = "^1.1.2"
+Pillow = "^9.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^22.10.0", allow-prereleases = true}
+mypy = "^0.982"
+pylint = "^2.15.4"
+flake8 = "^5.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
