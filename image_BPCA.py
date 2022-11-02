@@ -20,7 +20,7 @@ blocks, coords = make_blocks(X)
 
 X_blocks = np.array([x.reshape((9)) for x in blocks])
 
-print("X_blocks information")
+print("X_blocks => information")
 print(f"shape of X_blocks: {X_blocks.shape}")
 print(X_blocks)
 print()
@@ -28,7 +28,7 @@ print()
 scaler = MinMaxScaler()
 X_rescaled = scaler.fit_transform(X_blocks)
 
-print("X_rescaled information")
+print("X_rescaled => information")
 print(f"shape of X_rescaled: {X_rescaled.shape}")
 print(X_rescaled)
 print()
@@ -54,16 +54,17 @@ Xhat += mu
 Xhat = scaler.inverse_transform(Xhat)
 Xhat = Xhat.astype("int")
 
-print("Xhat information")
-print(Xhat)
+print("Xhat => information")
 print(f"shape of Xhat: {Xhat.shape}")
+print(Xhat)
 print()
 
 Xhat = np.array([x.reshape((3, 3)) for x in Xhat])
-
 X_block_revert = revert_block(Xhat, coords, X.shape)
-print(X_block_revert)
+
+print("X_block_revert => information")
 print(f"shape of X_block_revert: {X_block_revert.shape}")
+print(X_block_revert)
 print()
 
 plt.imshow(X_block_revert, cmap="Greys")
